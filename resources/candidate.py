@@ -11,7 +11,6 @@ from flask_jwt_extended import (
 
 from models.candidate import CandidateModel
 
-from blacklist import BLACKLIST
 
 _candidate_parser = reqparse.RequestParser()
 _candidate_parser.add_argument(  'fname',
