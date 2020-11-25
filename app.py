@@ -9,6 +9,7 @@ from security import authenticate, identity
 from resources.user import UserRegister
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
+from resources.candidate import Candidate, CandidateList
 
 
 app = Flask(__name__)
@@ -24,6 +25,8 @@ api.add_resource(ItemList, '/items')
 api.add_resource(UserRegister, '/register')
 api.add_resource(StoreList, '/stores')
 api.add_resource(Store, '/store/<string:name>')
+api.add_resource(Candidate, '/candidate')
+api.add_resource(CandidateList, '/candidates')
 
 if __name__ == '__main__':
     from db import db
